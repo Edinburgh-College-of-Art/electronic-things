@@ -5,21 +5,22 @@
 #include <SPI.h>
 #include <SD.h>
 //================================================================================
-const int chipSelect = 10; // Micro pin connected to pin D3 (Sparkfun) or CS (Adafruit)
+const int chipSelectPin = 10; // Micro pin connected to pin D3 (Sparkfun) or CS (Adafruit)
+//================================================================================
+String filename = "test.txt";
+String textToWrite = "Hello.";
+//================================================================================
 void setup()
 {
+  //------------------------------------------------------------------------------
   setupSerial();
-
-  Serial.print("Initializing SD card...");
-  if (!SD.begin(chipSelect))
-  {
-    Serial.println("initialization failed!");
-    while (1);
-  }
-  Serial.println("initialization done.");
-
-  writeToSdFile("test.txt");
-  readEntireFileFromSd("test.txt");
+  //------------------------------------------------------------------------------
+  initiliaseSdCard(chipSelectPin);
+  //------------------------------------------------------------------------------
+  writeTextToSdFile(filename, textToWrite);
+  //------------------------------------------------------------------------------
+  readEntireFileFromSd(filename);
+  //------------------------------------------------------------------------------
 }
 
 void loop()

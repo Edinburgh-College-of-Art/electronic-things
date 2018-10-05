@@ -1,26 +1,43 @@
-void writeToSdFile(String filename)
+//================================================================================
+
+void initiliaseSdCard(int csPin)
 {
-  File writeFile = SD.open(filename, FILE_WRITE); // only one file can be open at a time so, you have to close this one before opening another.
+  Serial.print("Initializing SD card...");
+  if (!SD.begin(csPin))
+  {
+    Serial.println("initialization failed!");
+    while (1);
+  }
+  Serial.println("initialization done.");
+}
+
+//================================================================================
+
+void writeTextToSdFile(String fileNameToWrite, String writeText)
+{
+  File writeFile = SD.open(fileNameToWrite, FILE_WRITE); // only one file can be open at a time so, you have to close this one before opening another.
 
   if (writeFile) // if the file opened okay, write to it:
   {
     Serial.print("Writing to test.txt...");
-    writeFile.println("testing 1, 2, 3.");
+    writeFile.println(writeText);
     writeFile.close();
     Serial.println("done.");
   }
   else
   {
-    fileOpenError(filename);
+    fileOpenError(fileNameToWrite);
   }
 }
 
-void readEntireFileFromSd(String filename)
+//================================================================================
+
+void readEntireFileFromSd(String filenameToRead)
 {
-  File readFile = SD.open(filename);
+  File readFile = SD.open(filenameToRead);
   if (readFile)
   {
-    Serial.print(filename); Serial.println(" :");
+    Serial.print(filenameToRead); Serial.println(" :");
 
     while (readFile.available()) // read from the file until there's nothing else in it:
     {
@@ -30,7 +47,7 @@ void readEntireFileFromSd(String filename)
   }
   else
   {
-    fileOpenError(filename);
+    fileOpenError(filenameToRead);
   }
 }
 
