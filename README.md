@@ -1,2 +1,2 @@
-# Connected-Things
-Code to support the Design Connected Things course using the Arduino Micro
+# Electronic-Things
+Code to support the Design Electronic-Things course using the Arduino Micro
