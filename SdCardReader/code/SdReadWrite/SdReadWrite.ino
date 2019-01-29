@@ -5,9 +5,9 @@
 #include <SPI.h>
 #include <SD.h>
 //================================================================================
-const int chipSelectPin = 10; // Micro pin connected to pin D3 (Sparkfun) or CS (Adafruit)
+const int chipSelectPin = 8; // Micro pin connected to pin D3 (Sparkfun) or CS (Adafruit)
 //================================================================================
-String filename = "test.txt";
+String filename = "sensor.txt";
 String textToWrite = "Hello.";
 //================================================================================
 void setup()
@@ -25,6 +25,9 @@ void setup()
 
 void loop()
 {
+  int sensorValue = analogRead(A0);
+  writeTextToSdFile(filename, String(sensorValue));
+  delay(5000);
 }
 
 
