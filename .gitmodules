@@ -1,0 +1,3 @@
+[submodule "arduino-examples"]
+	path = arduino-examples
+	url = https://github.com/Edinburgh-College-of-Art/arduino-examples.git
