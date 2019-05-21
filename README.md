@@ -24,6 +24,10 @@ Blocks is a simplification of programming with the micro:bit and a great place t
 Blocks is essentially just javascript code, if you press the Javascript switch you can start editing the code directly
 ![](https://techtutorialsx.files.wordpress.com/2017/09/microbit-board-hello-world-javascript-blocks-editor.png)
 
+#### Filesystem
+
+[Use blocks to access filesystem](https://support.microbit.org/support/solutions/articles/19000067844-how-do-i-access-files-on-the-micro-bit-in-the-makecode-editor-)
+
 ### Python
 
 Write python code for the micro:bit [in the browser](https://python.microbit.org/v/1.1) or [download the Mu editor](http://codewith.mu).
