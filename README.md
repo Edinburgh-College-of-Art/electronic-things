@@ -4,7 +4,31 @@ Code to support the Product Design Electronic Things course using the Arduino an
 
 # Contents
 
-* * *
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Product Design: Electronic Things Git Repository](#product-design-electronic-things-git-repository)
+- [Contents](#contents)
+- [micro:bit](#microbit)
+	- [Languages](#languages)
+		- [Blocks](#blocks)
+			- [Blocks JavaScript](#blocks-javascript)
+			- [Filesystem](#filesystem)
+		- [Python](#python)
+		- [Arduino](#arduino)
+	- [BLE](#ble)
+		- [Tools](#tools)
+			- [Mobile](#mobile)
+			- [Desktop](#desktop)
+	- [Code](#code)
+		- [microbit-arduino](#microbit-arduino)
+			- [simple-ble-uart](#simple-ble-uart)
+			- [ble-accelerometer](#ble-accelerometer)
+			- [libraries](#libraries)
+				- [MMA8653](#mma8653)
+				- [SparkFun_MAG3110](#sparkfunmag3110)
+
+<!-- /TOC -->
+---
 
 # micro:bit
 
@@ -42,8 +66,55 @@ You can write for the micro:bit from the Arduino IDE. If you already know C++ or
 
 [There is a fairly comprehensive guide to setting up the micro:bit for use with the Arduino IDE at Adafruit's Website](https://learn.adafruit.com/use-micro-bit-with-arduino/overview). This is still being developed so some functions may not be available with the Arduino IDE that are available with other programming languages.
 
-## Examples
+---
 
-* * *
+## BLE
 
-# Arduino
+The microbit is capable of broadcasting bluetooth low energy data. The following tools will come in handy if you wish to monitor information over bluetooth
+
+### Tools
+
+#### Mobile
+
+- [LightBlue](https://punchthrough.com)
+    - [iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110?mt=8)
+    - [Android](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+- [Adafruit Bluefruit Connect SE](https://learn.adafruit.com/bluefruit-le-connect-for-ios)
+- [nRF Connect](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Connect-for-mobile)
+
+#### Desktop
+
+- [Adafruit Bluefruit Connect SE](https://github.com/adafruit/adafruit-bluefruit-le-desktop)
+- [nRF Connect](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Connect-for-desktop)
+- [btlejack [python interface]](https://github.com/virtualabs/btlejack)
+
+
+---
+
+## Code
+
+### microbit-arduino
+
+These examples relate to programming the microbit with the Arduino IDE. make sure to follow the [setup instructions at Adafruit](https://learn.adafruit.com/use-micro-bit-with-arduino/install-board-and-blink)
+
+#### simple-ble-uart
+
+Simple demonstration of sending data over BLE.
+
+#### ble-accelerometer
+
+Broadcast accelerometer data over a BLE UART service. Remember to install the correct [libraries](#libraries). You should also install a [BLE tool](#tools).
+
+#### libraries
+
+Drag and drop the contents of the libraries folder into your `Arduino/libraries` otherwise some examples will not compile.
+
+##### MMA8653
+
+The `MMA8653` is the onboard accelerometer for the micro-bit
+
+##### SparkFun_MAG3110
+
+The `MMA8653` is the onboard magnetometer for the micro-bit
+
+---
