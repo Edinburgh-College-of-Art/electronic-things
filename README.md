@@ -13,6 +13,7 @@ Code to support the Product Design Electronic Things course using the Arduino an
 		- [Blocks](#blocks)
 			- [Blocks JavaScript](#blocks-javascript)
 			- [Filesystem](#filesystem)
+			- [BLE](#ble)
 		- [Python](#python)
 		- [Arduino](#arduino)
 	- [BLE](#ble)
@@ -28,6 +29,7 @@ Code to support the Product Design Electronic Things course using the Arduino an
 				- [SparkFun_MAG3110](#sparkfunmag3110)
 
 <!-- /TOC -->
+
 ---
 
 # micro:bit
@@ -51,6 +53,39 @@ Blocks is essentially just javascript code, if you press the Javascript switch y
 #### Filesystem
 
 [Use blocks to access filesystem](https://support.microbit.org/support/solutions/articles/19000067844-how-do-i-access-files-on-the-micro-bit-in-the-makecode-editor-)
+
+#### BLE
+
+To stream data over bluetooth via make code, do the following using Google Chrome
+
+- create a project
+- Click settings cog
+  - project settings set "No Pairing Required: Anyone can connect via Bluetooth."
+- start the ble uart service and write data over uart
+
+```js
+bluetooth.startUartService();
+basic.forever(function() {
+  bluetooth.uartWriteValue("x", input.acceleration(Dimension.X));
+  bluetooth.uartWriteValue("y", input.acceleration(Dimension.Y));
+  bluetooth.uartWriteValue("z", input.acceleration(Dimension.Z));
+  basic.pause(200);
+});
+```
+
+- Click settings cog
+  - click about
+  - select Experiments
+  - activate bluetooth
+  - go back
+
+
+- Click settings cog
+  - pair bluetooth
+
+You should now see a show device console and you can export data from the session.
+
+---
 
 ### Python
 
@@ -77,8 +112,8 @@ The microbit is capable of broadcasting bluetooth low energy data. The following
 #### Mobile
 
 - [LightBlue](https://punchthrough.com)
-    - [iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110?mt=8)
-    - [Android](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+  - [iOS](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth/id557428110?mt=8)
+  - [Android](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
 - [Adafruit Bluefruit Connect SE](https://learn.adafruit.com/bluefruit-le-connect-for-ios)
 - [nRF Connect](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Connect-for-mobile)
 
@@ -87,7 +122,6 @@ The microbit is capable of broadcasting bluetooth low energy data. The following
 - [Adafruit Bluefruit Connect SE](https://github.com/adafruit/adafruit-bluefruit-le-desktop)
 - [nRF Connect](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Connect-for-desktop)
 - [btlejack [python interface]](https://github.com/virtualabs/btlejack)
-
 
 ---
 
