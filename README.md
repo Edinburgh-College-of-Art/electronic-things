@@ -152,3 +152,13 @@ The `MMA8653` is the onboard accelerometer for the micro-bit
 The `MMA8653` is the onboard magnetometer for the micro-bit
 
 ---
+
+## Arduino IDE
+
+### Set Style
+
+Select syntax highlighting in the following file
+
+```bash
+/Applications/Arduino.app/Contents/Resources/Java/lib/theme/theme.txt
+```
