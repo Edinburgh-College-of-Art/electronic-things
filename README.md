@@ -17,6 +17,7 @@ Code to support the Product Design Electronic Things course using the Arduino an
 		- [Python](#python)
 		- [Arduino](#arduino)
 	- [BLE](#ble)
+		- [MakeCode Setup](#makecode-setup)
 		- [Tools](#tools)
 			- [Mobile](#mobile)
 			- [Desktop](#desktop)
@@ -27,6 +28,9 @@ Code to support the Product Design Electronic Things course using the Arduino an
 			- [libraries](#libraries)
 				- [MMA8653](#mma8653)
 				- [SparkFun_MAG3110](#sparkfunmag3110)
+	- [Arduino IDE](#arduino-ide)
+		- [Set Style](#set-style)
+	- [Troubleshooting](#troubleshooting)
 
 <!-- /TOC -->
 
@@ -79,8 +83,7 @@ basic.forever(function() {
   - activate bluetooth
   - go back
 
-
-- Click settings cog
+* Click settings cog
   - pair bluetooth
 
 You should now see a show device console and you can export data from the session.
@@ -106,6 +109,18 @@ You can write for the micro:bit from the Arduino IDE. If you already know C++ or
 ## BLE
 
 The microbit is capable of broadcasting bluetooth low energy data. The following tools will come in handy if you wish to monitor information over bluetooth
+
+### MakeCode Setup
+
+To setup bluetooth in make code, you must first add the bluetooth. In the blocks menu, select extensions and add bluetooth.
+
+![](gifs/ble_activate.gif)
+
+Logging data via bluetooth is currently still experimental. You will need to select `About` then experiments and choose bluetooth console.
+
+![](gifs/ble_console.gif)
+
+At the moment, the console only seems to like data in the format of a `key` / `value` pair. So, use the `bluetooth.uartWriteValue` block for now.
 
 ### Tools
 
@@ -162,3 +177,11 @@ Select syntax highlighting in the following file
 ```bash
 /Applications/Arduino.app/Contents/Resources/Java/lib/theme/theme.txt
 ```
+
+---
+
+## Troubleshooting
+
+Sometimes everything can just stop working. If that is the case, a good first step is to perform a [factory reset](https://support.microbit.org/support/solutions/articles/19000021613-reset-the-micro-bit-to-factory-defaults).
+
+From there, try and build your program back up gradually to identify where something went wrong.
