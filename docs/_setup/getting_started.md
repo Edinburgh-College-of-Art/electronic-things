@@ -28,7 +28,7 @@ Inside your kit you should find:
 - Rotary Potentiometer – 10 kΩ
 - Tactile Switches (5 Pack)
 
-For a breakdown of the components and how to use then, see the [Arduino Foundations course on LinkedIn Learning](Arduino Foundations LinkedIn Learning).
+For a breakdown of the components and how to use then, see the [Arduino Foundations course on LinkedIn Learning](https://www.linkedin.com/learning/learning-arduino-foundations-2/arduino-hardware-for-this-course).
 
 There are also [these video tutorials by Mark Kobine](https://media.ed.ac.uk/playlist/dedicated/1_3kzff87o/1_68utunof).
 
