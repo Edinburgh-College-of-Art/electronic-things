@@ -42,16 +42,19 @@ Code to support the Product Design Electronic Things course using the Arduino an
 
 There are a number of ways you can interact with the micro:bit depending what you are comfortable with.
 
-### Blocks
+### MakeCode Blocks
+
+MakeCode Block is a [Scratch-like](https://scratch.mit.edu) environment for coding with the micro:bit.
 
 You can write blocks code on the [make code website](https://makecode.microbit.org/)
+
 ![](https://www.imda.gov.sg/-/media/digital-maker/projects/javascript-blocks-editor.png?h=194&w=374&la=en&hash=BE73D5B5DBA8952A0C4BC3C756F71C5EB36CD26F)
 
 Blocks is a simplification of programming with the micro:bit and a great place to start if you are new to programming. Some operations that would usually be complex have already been encapsulated into function blocks, making things like radio and bluetooth communication much easier.
 
-#### Blocks JavaScript
+#### MakeCode Blocks JavaScript
 
-Blocks is essentially just javascript code, if you press the Javascript switch you can start editing the code directly
+MakeCode Blocks are essentially just javascript code, if you press the Javascript switch you can start editing the code directly
 ![](https://techtutorialsx.files.wordpress.com/2017/09/microbit-board-hello-world-javascript-blocks-editor.png)
 
 #### Filesystem
@@ -158,17 +161,19 @@ Broadcast accelerometer data over a BLE UART service. Remember to install the co
 
 Drag and drop the contents of the libraries folder into your `Arduino/libraries` otherwise some examples will not compile.
 
-##### MMA8653
+##### Combined Accelerometer / Magnetometer (LSM303AGR)
 
-The `MMA8653` is the onboard accelerometer for the micro-bit
-
-##### SparkFun_MAG3110
-
-The `MMA8653` is the onboard magnetometer for the micro-bit
+For the new version microb:bit there is a Combined Accelerometer / Magnetometer. Use the [LSM303AGR](https://github.com/stm32duino/LSM303AGR) library.
 
 ---
 
 ## Arduino IDE
+
+### Accelerometer and Magnetometer
+
+For using the accelerometer and using the magnetometer, first [Check Your Board Version](https://learn.adafruit.com/use-micro-bit-with-arduino/accelerometer-and-magnetometer)
+
+It should be the [Combined Accelerometer / Magnetometer (LSM303AGR)](https://github.com/stm32duino/LSM303AGR)
 
 ### Set Style
 
