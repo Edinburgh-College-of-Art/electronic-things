@@ -19,9 +19,9 @@ Inside your kit you should find:
 -   USB cable
 -   HC-SR04+
 -   Servo
--   NeoPixelRing
--   Rotary Potentiometer – 10 kΩ
--   Tactile Switches (5 Pack)
+-   [NeoPixelRing](https://media.ed.ac.uk/media/Arduino%20Nano%2033%20IoT%3A%20NeoPixel%20Wiring/1_ofx57xxt)
+-   [Rotary Potentiometer – 10 kΩ](https://git.ecdf.ed.ac.uk/mhamilt7/ddt-handover#media-hopper-create)
+-   [Tactile Switches (5 Pack)](https://git.ecdf.ed.ac.uk/mhamilt7/ddt-handover#media-hopper-create)
 
 For a breakdown of the components and how to use then, see the [Arduino Foundations course on LinkedIn Learning](https://www.linkedin.com/learning/learning-arduino-foundations-2/arduino-hardware-for-this-course).
 
