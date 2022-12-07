@@ -7,7 +7,7 @@ title: Electronic Things
 
 You can program the Arduino Uno using the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
-After downloading the Arduino IDE, open the application, plug-in your Arduino and upload the `Blink` example.
+After downloading the Arduino IDE, open the application, [plug-in your Arduino and upload the `Blink` example](https://media.ed.ac.uk/playlist/dedicated/1_3kzff87o/1_v3jt5sz1).
 
 ## What is Inside the Kit?
 
