@@ -5,8 +5,6 @@ course: Electronic Things
 repo_url: electronic-things
 ---
 
-{%- include course_index.html course_title="Electronic Things" -%}
-
 
 ## Links
 
